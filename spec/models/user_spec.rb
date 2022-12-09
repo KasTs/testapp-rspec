@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe User do
   it "é valido quando contem o primeiro nome, ultimo nome e email" do
-    user = User.new( firstname: 'Thiago', 
-                     lastname: 'Fagundes', 
+    user = User.new( firstname: 'Thiago',
+                     lastname: 'Fagundes',
                      email: "Thiago@gatinho.com" )
 
     expect(user).to be_valid
@@ -47,5 +47,9 @@ describe User do
     user.valid?
 
     expect(user.errors[:email]).to include( "can't be blank" )
+  end
+
+  it "Ensinando GIT para amigo" do
+    true == true
   end
 end
